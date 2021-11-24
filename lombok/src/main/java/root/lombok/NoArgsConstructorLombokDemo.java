@@ -3,7 +3,11 @@ package root.lombok;
 import lombok.NoArgsConstructor;
 
 /**
+ * 注解 @NoArgsConstructor 会自动生成空参构造函数
+ *
  * @author orionpax
+ * @see AllArgsConstructorLombokDemo
+ * @see RequiredArgsConstructorLombokDemo
  * @since 2021/11/24
  */
 @NoArgsConstructor

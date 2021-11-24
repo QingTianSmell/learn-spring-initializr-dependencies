@@ -4,6 +4,9 @@ import lombok.Getter;
 import lombok.Setter;
 
 /**
+ * 注解 @Getter 会自动生成 get... 方法
+ * 注解 @Setter 会自动生成 set... 方法
+ *
  * @author orionpax
  * @since 2021/11/24
  */

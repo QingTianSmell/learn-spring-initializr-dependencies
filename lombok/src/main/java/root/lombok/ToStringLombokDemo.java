@@ -3,6 +3,8 @@ package root.lombok;
 import lombok.ToString;
 
 /**
+ * 注解 @ToString 会自动生成 toString 方法
+ *
  * @author orionpax
  * @since 2021/11/24
  */

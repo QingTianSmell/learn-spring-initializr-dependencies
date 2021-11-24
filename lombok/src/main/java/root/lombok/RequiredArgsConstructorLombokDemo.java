@@ -3,7 +3,11 @@ package root.lombok;
 import lombok.RequiredArgsConstructor;
 
 /**
+ * 注解 @RequiredArgsConstructor 会自动生成必要参构造函数
+ *
  * @author orionpax
+ * @see NoArgsConstructorLombokDemo
+ * @see AllArgsConstructorLombokDemo
  * @since 2021/11/24
  */
 @RequiredArgsConstructor

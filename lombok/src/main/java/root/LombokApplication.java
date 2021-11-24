@@ -19,6 +19,29 @@ public class LombokApplication {
 
         SpringApplication.run(LombokApplication.class, args);
         // @Getter/@Setter
+        annotationGetterAndSetter();
+        // @ToString
+        annotationToString();
+        // @EqualsAndHashCode
+        annotationEqualsAndHashCode();
+        // @NoArgsConstructor
+        annotationNoArgsConstructor();
+        // @AllArgsConstructor
+        annotationAllArgsConstructor();
+        // @RequiredArgsConstructor
+        annotationRequiredArgsConstructor();
+        // @Data
+        annotationData();
+        // @Value
+        annotationValue();
+        // @Builder
+        annotationBuilder();
+        // @Slf4j
+        annotationSlf4j();
+
+    }
+
+    private static void annotationGetterAndSetter() {
         log.info("------------------------");
         log.info("@Getter/@Setter");
         GetterSetterLombokDemo getterSetterLombokDemo = new GetterSetterLombokDemo();
@@ -31,14 +54,18 @@ public class LombokApplication {
         getterSetterOriginDemo.setBar("bar");
         log.info("getterSetterOriginDemo.getFoo() : {}", getterSetterOriginDemo.getFoo());
         log.info("getterSetterOriginDemo.getBar() : {}", getterSetterOriginDemo.getBar());
-        // @ToString
+    }
+
+    private static void annotationToString() {
         log.info("------------------------");
         log.info("@ToString");
         ToStringLombokDemo toStringLombokDemo = new ToStringLombokDemo();
         log.info("toStringLombokDemo.toString : {}", toStringLombokDemo);
         ToStringOriginDemo toStringOriginDemo = new ToStringOriginDemo();
         log.info("toStringOriginDemo.toString : {}", toStringOriginDemo);
-        // @EqualsAndHashCode
+    }
+
+    private static void annotationEqualsAndHashCode() {
         log.info("------------------------");
         log.info("@EqualsAndHashCode");
         EqualsAndHashCodeLombokDemo equalsAndHashCodeLombokDemo1 = new EqualsAndHashCodeLombokDemo();
@@ -47,28 +74,36 @@ public class LombokApplication {
         EqualsAndHashCodeOriginDemo equalsAndHashCodeOriginDemo1 = new EqualsAndHashCodeOriginDemo();
         EqualsAndHashCodeOriginDemo equalsAndHashCodeOriginDemo2 = new EqualsAndHashCodeOriginDemo();
         log.info("equalsAndHashCodeOriginDemo1.equals(equalsAndHashCodeOriginDemo2) : {}", equalsAndHashCodeOriginDemo1.equals(equalsAndHashCodeOriginDemo2));
-        // @NoArgsConstructor
+    }
+
+    private static void annotationNoArgsConstructor() {
         log.info("------------------------");
         log.info("@NoArgsConstructor");
         NoArgsConstructorLombokDemo noArgsConstructorLombokDemo = new NoArgsConstructorLombokDemo();
         log.info("noArgsConstructorLombokDemo : {}", noArgsConstructorLombokDemo);
         NoArgsConstructorOriginDemo noArgsConstructorOriginDemo = new NoArgsConstructorOriginDemo();
         log.info("noArgsConstructorOriginDemo : {}", noArgsConstructorOriginDemo);
-        // @AllArgsConstructor
+    }
+
+    private static void annotationAllArgsConstructor() {
         log.info("------------------------");
         log.info("@AllArgsConstructor");
         AllArgsConstructorLombokDemo allArgsConstructorLombokDemo = new AllArgsConstructorLombokDemo("foo", "bar");
         log.info("allArgsConstructorLombokDemo : {}", allArgsConstructorLombokDemo);
         AllArgsConstructorOriginDemo allArgsConstructorOriginDemo = new AllArgsConstructorOriginDemo("foo", "bar");
         log.info("allArgsConstructorOriginDemo : {}", allArgsConstructorOriginDemo);
-        // @RequiredArgsConstructor
+    }
+
+    private static void annotationRequiredArgsConstructor() {
         log.info("------------------------");
         log.info("@RequiredArgsConstructor");
         RequiredArgsConstructorLombokDemo requiredArgsConstructorLombokDemo = new RequiredArgsConstructorLombokDemo("foo");
         log.info("requiredArgsConstructorLombokDemo : {}", requiredArgsConstructorLombokDemo);
         RequiredArgsConstructorOriginDemo requiredArgsConstructorOriginDemo = new RequiredArgsConstructorOriginDemo("foo");
         log.info("requiredArgsConstructorOriginDemo : {}", requiredArgsConstructorOriginDemo);
-        // @Data
+    }
+
+    private static void annotationData() {
         log.info("------------------------");
         log.info("@Data");
         DataLombokDemo dataLombokDemo1 = new DataLombokDemo("foo");
@@ -87,7 +122,9 @@ public class LombokApplication {
         DataOriginDemo dataOriginDemo2 = new DataOriginDemo("foo");
         dataOriginDemo2.setBar("bar");
         log.info("dataOriginDemo1.equals(dataOriginDemo2) : {}", dataOriginDemo1.equals(dataOriginDemo2));
-        // @Value
+    }
+
+    private static void annotationValue() {
         log.info("------------------------");
         log.info("@Value");
         ValueLombokDemo valueLombokDemo1 = new ValueLombokDemo("foo", "bar");
@@ -102,21 +139,24 @@ public class LombokApplication {
         log.info("valueOriginDemo1.toString() : {}", valueOriginDemo1);
         ValueOriginDemo valueOriginDemo2 = new ValueOriginDemo("foo", "bar");
         log.info("valueOriginDemo1.equals(valueOriginDemo2) : {}", valueOriginDemo1.equals(valueOriginDemo2));
-        // @Builder
+    }
+
+    private static void annotationBuilder() {
         log.info("------------------------");
         log.info("@Builder");
         BuilderLombokDemo builderLombokDemo = BuilderLombokDemo.builder().foo("foo").bar("bar").build();
         log.info("builderLombokDemo : {}", builderLombokDemo);
         BuilderOriginDemo builderOriginDemo = BuilderOriginDemo.builder().foo("foo").bar("bar").build();
         log.info("builderOriginDemo : {}", builderOriginDemo);
-        // @Slf4j
+    }
+
+    private static void annotationSlf4j() {
         log.info("------------------------");
         log.info("@Slf4j");
         Slf4jLombokDemo slf4jLombokDemo = new Slf4jLombokDemo();
         slf4jLombokDemo.test();
         Slf4jOriginDemo slf4jOriginDemo = new Slf4jOriginDemo();
         slf4jOriginDemo.test();
-
     }
 
 }
