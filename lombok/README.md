@@ -1,12 +1,60 @@
-## Lombok 模块
+## Lombok
+
+Java 注释库，有助于减少样板代码。
+
+### 引入依赖
+
+```xml
+<dependency>
+  <groupId>org.projectlombok</groupId>
+  <artifactId>lombok</artifactId>
+  <optional>true</optional>
+</dependency>
+```
+
+```xml
+<!-- 打包时排除 -->
+<plugin>
+  <groupId>org.springframework.boot</groupId>
+  <artifactId>spring-boot-maven-plugin</artifactId>
+  <configuration>
+    <excludes>
+      <exclude>
+        <groupId>org.projectlombok</groupId>
+        <artifactId>lombok</artifactId>
+      </exclude>
+    </excludes>
+  </configuration>
+</plugin>
+```
 
 ### 项目结构
 
 ```
 ├── root
-│   ├── lombok/             使用 Lombok 写法
-│   ├── original/           使用原生写法
-│   └── LombokApplication   演示启动类
+│   ├── lombok/                                使用 Lombok 的简化写法
+│   │   ├── AllArgsConstructorLombokDemo       @AllArgsConstructor 注解使用
+│   │   ├── BuilderLombokDemo                  @Builder 注解使用
+│   │   ├── DataLombokDemo                     @Data 注解使用
+│   │   ├── EqualsAndHashCodeLombokDemo        @EqualsAndHashCode 注解使用
+│   │   ├── GetterSetterLombokDemo             @GetterSetter 注解使用
+│   │   ├── NoArgsConstructorLombokDemo        @NoArgsConstructor 注解使用
+│   │   ├── RequiredArgsConstructorLombokDemo  @RequiredArgsConstructor 注解使用
+│   │   ├── Slf4jLombokDemo                    @Slf4j 注解使用
+│   │   ├── ToStringLombokDemo                 @ToString 注解使用
+│   │   ├── ValueLombokDemo                    @Value 注解使用
+│   ├── original/                              使用原生写法
+│   │   ├── AllArgsConstructorOriginDemo       @AllArgsConstructor 的原生写法
+│   │   ├── BuilderOriginDemo                  @Builder 的原生写法
+│   │   ├── DataOriginDemo                     @Data 的原生写法
+│   │   ├── EqualsAndHashCodeOriginDemo        @EqualsAndHashCode 的原生写法
+│   │   ├── GetterSetterOriginDemo             @GetterSetter 的原生写法
+│   │   ├── NoArgsConstructorOriginDemo        @NoArgsConstructor 的原生写法
+│   │   ├── RequiredArgsConstructorOriginDemo  @RequiredArgsConstructor 的原生写法
+│   │   ├── Slf4jOriginDemo                    @Slf4j 的原生写法
+│   │   ├── ToStringOriginDemo                 @ToString 的原生写法
+│   │   ├── ValueOriginDemo                    @Value 的原生写法
+│   └── LombokApplication                      演示启动类
 ```
 
 ### Lombok 常用注解
